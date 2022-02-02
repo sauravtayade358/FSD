@@ -1,0 +1,19 @@
+package com.sl.exceptionhandling;
+
+public class handling2 {
+public static void main(String[] args) {
+		
+		int a=10;
+		int b=0;
+		try 
+		{
+			int c=a/b;
+			System.out.println("Result is "+ c);
+		}
+		catch(ArithmeticException e)
+		{
+			System.out.println("Error "+e);
+		}
+		
+}
+}
