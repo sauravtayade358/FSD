@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+</head>
+<body>
+    <h2>Data types Demo</h2>
+    <script>
+        function greeting(name){
+            console.log("Welcome "+name);
+        }
+        function fullName(fname,lname, funct) {
+            fullname= fname+" "+lname;
+            console.log("Fullname: "+fullname);
+            funct(fullName); //callback
+        }
+        fullName("Sonam","Soni", greeting );
+        //passing greenting function to funct variable
+    </script>
+    
+   
+
+</body>
+</html>

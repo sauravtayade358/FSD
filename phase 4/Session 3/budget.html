@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+
+
+</head>
+
+<body>
+    <h2>Expenses Demo</h2>
+    <script>
+
+        var map = new Map();
+
+
+        //add exenses using map
+        function addexp() {
+            map.set("Schoolfee", 1000);
+            map.set("Stn", 2500);
+            map.set("cloths", 3500);
+            map.set("shoes", 500);
+            map.set("bag", 500);
+            map.set("books", 2500);
+            console.log("Size of the map object: " + map.size);
+
+        }
+
+
+        function showexp() {
+            console.log("Expenses Function executed");
+            map.forEach((value, key) => {
+                console.log(`${key}: ${value}`)
+            })
+        }
+
+        function sumexp() {
+
+            let sum = 0;
+            console.log("Sum of Expenses Function executed");
+
+            map.forEach(value => {
+                sum += value;
+            });
+
+            console.log(sum);
+        }
+
+
+        function remove() {
+            console.log("Remove of Expenses Function executed");
+            console.log(map.delete('books'));
+            
+            console.log("Size of the map object: " + map.size);
+
+            console.log("after removing of Expenses");
+            map.forEach((value, key) => {
+                console.log(`${key}: ${value}`)
+            })
+
+        }
+
+        //calling function
+        addexp();
+        showexp();
+        sumexp();
+        remove();
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
